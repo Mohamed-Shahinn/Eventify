@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | Eventify</title>
+  <link rel="stylesheet" href="css/dark.css">
+</head>
+
+<body>
+
+<!-- 🔐 IF USER ALREADY LOGGED IN -->
+<script>
+  if (localStorage.getItem("loggedInUser")) {
+    window.location.replace("home.html");
+  }
+</script>
+
+<section class="payment">
+  <h1 class="payment-title">User Login</h1>
+
+  <div class="payment-card">
+    <p id="error" class="error-box"></p>
+
+    <form onsubmit="login(event)">
+      <label>Username</label>
+      <input type="text" id="username" required>
+
+      <label>Password</label>
+      <input type="password" id="password" required>
+
+      <button class="btn">Login</button>
+    </form>
+
+    <p>Don't have an account? <a href="register.html">Register here</a></p>
+  </div>
+</section>
+
+<script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register | Eventify</title>
+  <link rel="stylesheet" href="css/dark.css">
+</head>
+<body>
+
+<section class="payment">
+  <h1 class="payment-title">User Registration</h1>
+
+  <div class="payment-card">
+    <p id="error" class="error-box"></p>
+
+    <form onsubmit="register(event)">
+        <label>Username</label>
+        <input type="text" id="username" required>
+      
+        <label>Password</label>
+        <input type="password" id="password" required>
+      
+        <label>Full Name</label>
+        <input type="text" id="fullName" required>
+      
+        <label>Email</label>
+        <input type="email" id="email" required>
+      
+        <label>Phone</label>
+        <input type="tel" id="phone" required>
+      
+        <button class="btn">Create Account</button>
+      </form>
+      
+  </div>
+</section>
+
+<script src="js/register.js"></script>
+</body>
+</html>

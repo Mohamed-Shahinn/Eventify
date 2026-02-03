@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Booking Summary | Eventify</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/dark.css">
+</head>
+
+<body>
+
+<!-- 🔐 AUTH CHECK -->
+<script>
+  if (!localStorage.getItem("loggedInUser")) {
+    window.location.replace("index.html");
+  }
+</script>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Eventify</div>
+  <div class="nav-links">
+    <a href="home.html">Events</a>
+  </div>
+</nav>
+
+<!-- BOOKING SUMMARY -->
+<section class="booking-summary">
+  <h1>Booking Summary</h1>
+
+  <div class="summary-card">
+
+    <h3>Event</h3>
+    <p>Live Concert</p>
+
+    <h3>Date & Time</h3>
+    <p>25 July • 8:00 PM</p>
+
+    <h3>Selected Seats</h3>
+    <ul id="seatsList"></ul>
+
+    <h3>Total Price</h3>
+    <p><strong><span id="totalPrice">0</span> EGP</strong></p>
+
+    <button class="btn confirm-btn" onclick="confirmBooking()">
+      Pay Now
+    </button>
+
+  </div>
+</section>
+
+<script src="js/booking.js"></script>
+
+<script>
+  function confirmBooking() {
+    window.location.href = "payment.html";
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Success | Eventify</title>
+  <link rel="stylesheet" href="css/dark.css">
+</head>
+
+<body>
+
+<!-- 🔐 AUTH CHECK -->
+<script>
+  if (!localStorage.getItem("loggedInUser")) {
+    window.location.replace("index.html");
+  }
+</script>
+
+<section class="success-page">
+  <div class="success-card">
+    <h1>Payment Successful 🎉</h1>
+    <p>Your booking has been confirmed.</p>
+
+    <a href="home.html" class="btn">Back to Events</a>
+  </div>
+</section>
+
+<!-- 🧹 CLEANUP AFTER SUCCESS -->
+<script>
+  localStorage.removeItem("selectedSeats");
+  localStorage.removeItem("totalPrice");
+</script>
+
+</body>
+</html>

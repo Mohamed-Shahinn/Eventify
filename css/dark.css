@@ -1,0 +1,394 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #0f0f1a;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: #0b0b14;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #8f7cff;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+}
+
+/* ================= HERO ================= */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #aaa;
+}
+
+/* ================= EVENTS ================= */
+.events {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 40px;
+}
+
+.event-card {
+  background: #161627;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.event-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.event-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.event-info {
+  padding: 20px;
+}
+
+.event-info p {
+  color: #aaa;
+  margin-bottom: 15px;
+}
+/* ================= WIDE EVENT ================= */
+.wide-event {
+  margin: 40px;
+  background: linear-gradient(145deg, #161627, #1b1b33);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.45);
+}
+.wide-event:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+.wide-event img {
+  width: 100%;
+  height: 320px;          /* نفس إحساس الكروت */
+  object-fit: cover;
+  display: block;
+}
+
+.wide-event-content {
+  padding: 30px;
+}
+
+.wide-event-content h2 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.wide-event-content p {
+  color: #b3b3d1;
+  margin-bottom: 18px;
+}
+
+
+/* ================= BUTTON ================= */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #8f7cff;
+  color: #000;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #a89bff;
+}
+
+/* ================= EVENT DETAILS ================= */
+.event-details {
+  padding: 60px 40px;
+}
+
+.event-meta {
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.event-desc {
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* ================= SEATS ================= */
+.seats-section {
+  padding: 40px;
+}
+
+.seats-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 12px;
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+.seat {
+  background: #2a2a3d;
+  height: 40px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.seat.selected {
+  background: #8f7cff;
+}
+
+.seat.reserved {
+  background: #444;
+  cursor: not-allowed;
+}
+
+/* ================= BOOKING ================= */
+.booking-bar {
+  display: flex;
+  justify-content: space-between;
+  background: #161627;
+  padding: 15px 25px;
+  border-radius: 12px;
+  max-width: 500px;
+}
+/* ================= BOOKING SUMMARY ================= */
+
+.booking-summary {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #15152a, #0f0f1a);
+  padding: 40px 20px;
+}
+
+.booking-summary h1 {
+  margin-bottom: 25px;
+  font-size: 26px;
+}
+
+/* Card */
+.summary-card {
+  width: 420px;
+  background: #161627;
+  padding: 35px;
+  border-radius: 18px;
+  border: 1px solid #26263d;
+}
+
+/* Text */
+.summary-card h3 {
+  margin-top: 20px;
+  margin-bottom: 6px;
+  font-size: 15px;
+  color: #b3b3d1;
+}
+
+.summary-card p,
+.summary-card ul {
+  font-size: 16px;        /* أكبر شوية */
+  color: #fff;
+}
+
+.summary-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 5px;
+}
+
+/* Button */
+.confirm-btn {
+  width: 100%;
+  margin-top: 30px;
+  font-size: 16px;
+}
+
+/* ================= ADMIN ================= */
+.admin-section {
+  padding: 60px 40px;
+}
+
+.admin-section h1 {
+  margin-bottom: 30px;
+  font-size: 26px;
+}
+
+/* Admin Card Feel */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: linear-gradient(145deg, #161627, #1b1b33);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+}
+
+/* Header */
+.admin-table thead {
+  background: #1f1f3a;
+}
+
+.admin-table th {
+  padding: 18px;
+  text-align: left;
+  font-size: 13px;
+  color: #b3b3d1;
+  letter-spacing: 0.5px;
+}
+
+/* Body */
+.admin-table td {
+  padding: 16px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.admin-table tbody tr {
+  border-bottom: 1px solid #2a2a4a;
+  transition: background 0.2s;
+}
+
+.admin-table tbody tr:hover {
+  background: #1f1f33;
+}
+
+/* Status Pills */
+.status {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.status.pending {
+  background: #f1c40f;
+  color: #000;
+}
+
+.status.confirmed {
+  background: #2ecc71;
+  color: #000;
+}
+
+
+/* ================= PAYMENT ================= */
+.payment {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #15152a, #0f0f1a);
+}
+
+.payment-title {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.payment-card {
+  width: 430px;
+  background: #161627;
+  padding: 40px;
+  border-radius: 16px;
+  border: 1px solid #26263d;
+}
+
+.payment label {
+  display: block;
+  margin: 14px 0 6px;
+  font-size: 13px;
+  color: #b3b3d1;
+}
+
+.payment input {
+  width: 100%;
+  padding: 12px;
+  background: #1c1c33;
+  border: 1px solid #2c2c4d;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.payment input:focus {
+  outline: none;
+  border-color: #8f7cff;
+}
+
+.error-box {
+  background: #3a1c1c;
+  color: #ff9c9c;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  display: none;
+}
+
+.payment button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 12px;
+  background: #8f7cff;
+  color: #000;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/* ================= SUCCESS ================= */
+.success-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-card {
+  background: #161627;
+  padding: 50px;
+  border-radius: 20px;
+  text-align: center;
+}
